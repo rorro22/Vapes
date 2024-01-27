@@ -38,11 +38,10 @@ export default {
 
 <style scoped>
   .car {
-    position: fixed;
-    left: 0;
     background-color: rgba(0, 0, 0, 0.183);
     top: 15vh;
-    width: 100vw;
+
+    grid-area: 2 / 1 / 3 / -1;
   }
 
   .carousel-image {

@@ -1,11 +1,9 @@
 <template>
   <div class="layout">
-      <HelloWorld></HelloWorld>
       <Carrousel></Carrousel>
       <Promociones></Promociones>
       <Catalogo></Catalogo>
       <Carrito></Carrito>
-      <Pie></Pie>
     </div>
 </template>
 
@@ -13,19 +11,15 @@
 import Promociones from "@/components/CatalogoTienda/Promociones.vue";
 import Carrito from "@/components/CatalogoTienda/Carrito.vue";
 import Catalogo from "@/components/CatalogoTienda/Catalogo.vue";
-import HelloWorld from '@/components/HelloWorld.vue'
-import Carrousel from '@/components/Carrousel.vue'
-import Pie from '@/components/Pie.vue'
+import Carrousel from "./components/Carrousel.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Promociones,
     Carrito,
     Catalogo,
-    Carrousel,
-    Pie
+    Carrousel
   }
 }
 
