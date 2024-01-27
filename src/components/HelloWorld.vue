@@ -2,7 +2,6 @@
   <div class="header">
     <img src="@/assets/logo.png" alt="Logo" class="logo">
     <h1>Rodri me la pela</h1>
-    <!-- Agrega más contenido según sea necesario -->
   </div>
 </template>
 
@@ -12,11 +11,7 @@ export default {
 };
 </script>
 
-<style>
-.header {
-  grid-area: 1 / 1 / 2 / 4;
-}
-
+<style scoped>
 .logo {
   width: 50px;
   margin-right: 15px;

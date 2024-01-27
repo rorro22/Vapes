@@ -1,20 +1,30 @@
 <template>
-    <div class="Catalogo">
-      <h1>CatalogoTienda</h1>
-      <div class="seccion"></div>
+  <div class="Catalogo">
+    <h1>CatalogoTienda</h1>
+    <div class="seccion contenido">
+      <div v-for="index in 30" :key="index" class="producto">
+        <img :src="'https://placekitten.com/200/300?image=' + index" alt="Gatito" />
+      </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'Catalogo',
-  }
-  </script>
+  </div>
+</template>
 
+<script>
+export default {
+  name: 'Catalogo',
+}
+</script>
 
-  <style>
-  .Catalogo {
-    flex-grow: 2;
-    height: 100%;
-  }
-  </style>
+<style scoped>
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Estilos opcionales para cada imagen de gatito */
+.producto {
+  margin: 10px;
+  /* Otros estilos según sea necesario */
+}
+</style>

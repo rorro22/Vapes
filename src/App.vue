@@ -1,11 +1,9 @@
 <template>
   <div class="layout">
       <HelloWorld></HelloWorld>
-      <div class="layoutCatalogoTienda">
-        <Promociones></Promociones>
-        <Carrito></Carrito>
-        <Catalogo></Catalogo>
-      </div>
+      <Promociones></Promociones>
+      <Catalogo></Catalogo>
+      <Carrito></Carrito>
     </div>
 </template>
 
@@ -14,7 +12,6 @@ import HelloWorld from './components/HelloWorld.vue'
 import Promociones from "@/components/CatalogoTienda/Promociones.vue";
 import Carrito from "@/components/CatalogoTienda/Carrito.vue";
 import Catalogo from "@/components/CatalogoTienda/Catalogo.vue";
-
 
 export default {
   name: 'App',
@@ -31,20 +28,51 @@ export default {
   .layout {
     display: grid;
     grid-template-columns: 3fr 2fr 3fr;
-    grid-template-rows: 1fr 4fr 4fr 1fr;
+    grid-template-rows: minmax(10vh, auto) minmax(40vh, auto) 4fr 1fr;
   }
 
-  .layoutCatalogoTienda {
-    color: black;
-    grid-area: 3 / 1 / 4 / 4;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    align-items: flex-start;
+  .header {
+    grid-area: 1 / 1 / 2 / 3;
   }
 
   .seccion {
     background-color: blueviolet;
     height: inherit;
+  }
+
+  .Catalogo {
+    grid-area: 3 / 3 / -1 / 4;
+  }
+  .Promociones {
+    grid-area: 3 / 1 / -1 / 2;
+  }
+
+  .Carrito {
+    grid-area: 3 / 2 / -1 / 3;
+
+  }
+
+  @media (max-width: 1200px) {
+
+  .layout {
+    grid-template-columns: 1fr  2fr;
+    grid-template-rows: minmax(10vh, auto) minmax(40vh, auto) 4fr 1fr;
+  }
+  
+  .header {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .Carrito {
+     display: none;
+  }
+  
+  .Catalogo {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  
+  .Promociones {
+      grid-area: 3 / 1 / 4 / 2;
+    }
   }
 </style>
