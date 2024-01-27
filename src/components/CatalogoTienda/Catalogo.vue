@@ -16,15 +16,13 @@ export default {
 </script>
 
 <style scoped>
-.contenido {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
+  .contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 
-/* Estilos opcionales para cada imagen de gatito */
-.producto {
-  margin: 10px;
-  /* Otros estilos según sea necesario */
-}
+  .producto {
+    margin: 10px;
+  }
 </style>
