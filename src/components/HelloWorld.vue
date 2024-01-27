@@ -1,8 +1,17 @@
 <template>
   <div class="header">
-    <img src="@/assets/logo.png" alt="Logo" class="logo">
-    <h1>Bodeguita Vapes</h1>
-    <!-- Agrega más contenido según sea necesario -->
+      <div class="left-section">
+        <img src="@/imagenes/logito.jpg" alt="Logo" class="logo"> 
+        <h1>Bodeguita Vapes</h1>
+      </div>
+      <div class="right-section">
+        <nav class="navbar">
+          <router-link to="/">Inicio</router-link>
+          <router-link to="/productos">Productos</router-link>
+          <router-link to="/contacto">Contacto</router-link>
+          <!-- Agrega más enlaces del navbar según sea necesario -->
+        </nav>
+      </div>
   </div>
 </template>
 
@@ -14,21 +23,60 @@ export default {
 
 <style scoped>
 .header {
-  position: fixed; /* Establece la posición fija */
-  top: 0; /* Fija el encabezado en la parte superior */
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%; /* Ocupa todo el ancho de la pantalla */
-  background-color: #333; /* Color de fondo oscuro */
-  color: #fff; /* Color del texto */
-  padding: 15px; /* Espaciado interno */
-  display: flex; /* Utiliza un modelo de caja flexible para el diseño */
-  align-items: center; /* Centra verticalmente los elementos en el contenedor */
+  width: 100%;
+  background-color: #000000;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between; /* Centra el contenido horizontalmente */
+}
+
+.center-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Ajusta según sea necesario */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.left-section img {
+  width: 14%;
 }
 
 .logo {
-  width: 50px; /* Ajusta el ancho del logo según sea necesario */
-  margin-right: 15px; /* Agrega espacio entre el logo y el texto */
+  width: 50px;
+  margin-right: 15px;
 }
 
-/* Agrega estilos adicionales según sea necesario */
+.right-section {
+  display: flex;
+  align-items: center;
+  margin-right: 10%;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+}
+
+.navbar router-link {
+  margin-right: 10%;
+  font-size: larger;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar router-link:hover {
+  color: #ffcc00;
+}
+
 </style>
